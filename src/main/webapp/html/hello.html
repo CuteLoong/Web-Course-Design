@@ -95,6 +95,35 @@
     }
 
     /*----    section    ----*/
+    /*----    jumbotron    ----*/
+    /*----    new    ----*/
+    .content-new {
+        width: 100%;
+    }
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: #e5e5e5 1px solid;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+    .title .title-header {
+        font-size: 30px;
+    }
+    .title .title-header span {
+        vertical-align: middle;
+    }
+    .title .title-header img {
+        vertical-align: middle;
+    }
+    .title a {
+        text-decoration: none;
+        color: #00785a;
+    }
+    .title a:hover {
+        color: #9e844d;
+    }
 
 </style>
 <body>
@@ -122,8 +151,8 @@
                                                     <span class="caret"></span>
                                                 </a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#" >Action1</a></li>
-                                                    <li><a href="#" >Action2</a></li>
+                                                    <li><a href="#" >923创新实验室</a></li>
+                                                    <li><a href="#" >925移动开发实验室</a></li>
                                                     <li><a href="#" >Action3</a></li>
                                                     <li><a href="#" >Action4</a></li>
                                                     <li role="separator" class="divider"></li>
@@ -163,19 +192,19 @@
                                     <div class="item active">
                                         <img src="../resources/login_container_bg_01b.jpg" alt="...">
                                         <div class="carousel-caption">
-                                            ...
+
                                         </div>
                                     </div>
                                     <div class="item">
                                         <img src="../resources/login_container_bg_02b.jpg" alt="...">
                                         <div class="carousel-caption">
-                                            ...
+
                                         </div>
                                     </div>
                                     <div class="item">
                                         <img src="../resources/login_container_bg_03b.jpg" alt="...">
                                         <div class="carousel-caption">
-                                            ...
+
                                         </div>
                                     </div>
                                 </div>
@@ -194,6 +223,33 @@
                     </div>
                 </div>
             </div>
+            <div class="content-new">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="title">
+                                <span class="title-header">
+                                    <img src="../resources/notify.png"></img>
+                                    <span>公告通知</span>
+                                </span>
+                                <span><a href="">查看更多-></a></span>
+                            </div>
+                            <div class="new-body">
+
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="title">
+                                <span class="title-header">
+                                    <img src="../resources/notify.png"></img>
+                                    <span>公告通知</span>
+                                </span>
+                                <span><a href="">查看更多-></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -204,13 +260,13 @@
                 let child = $(this).find(".dropdown-menu");
                 if(child)
                 {
-                    child.fadeIn();
+                    child.slideDown();
                 }
             },function () {
                 let child = $(this).find(".dropdown-menu");
                 if(child)
                 {
-                    child.fadeOut();
+                    child.slideUp();
                 }
             })
         })
