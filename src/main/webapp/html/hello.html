@@ -17,6 +17,22 @@
     .green {
         background-color: #00785a;
     }
+    .separator {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 1px;
+        height: 12px;
+        background: #99c9bd;
+        margin-top: -6px;
+    }
+    .image-shrink {
+        height: auto;
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
 
     /*----    header    ----*/
     .nav-container {
@@ -97,7 +113,7 @@
     /*----    section    ----*/
     /*----    jumbotron    ----*/
     /*----    new    ----*/
-    .content-new {
+    .content-notify {
         width: 100%;
     }
     .title {
@@ -123,6 +139,49 @@
     }
     .title a:hover {
         color: #9e844d;
+    }
+
+    .notify-body {
+        /*min-height: 400px;*/
+        max-height: 400px;
+    }
+
+    .notify-body ul {
+        list-style: none;
+    }
+    .notify-body ul a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+        color: black;
+        align-items: center;
+    }
+    .notify-body ul a i {
+        font-size: 18px;
+        color: #00785a;
+        font-family: Times New Roman;
+        font-style: normal;
+        font-weight: bold;
+        display: inline-block;
+        width: 55px;
+        margin-right: 15px;
+        position: relative;
+        vertical-align: middle;
+    }
+    .notify-body ul a span {
+        color: #323232;
+        display: inline-block;
+        max-width: 75%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+    .notify-body ul a:hover span {
+        color: #9e844d;
+    }
+    .notify-body .activity-pic {
+        height: 400px;
     }
 
 </style>
@@ -223,7 +282,7 @@
                     </div>
                 </div>
             </div>
-            <div class="content-new">
+            <div class="content-notify">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-5">
@@ -234,17 +293,63 @@
                                 </span>
                                 <span><a href="">查看更多-></a></span>
                             </div>
-                            <div class="new-body">
-
+                            <div class="notify-body">
+                                <ul>
+                                    <li><a href="">
+                                        <i>12-18 <div class="separator"></div></i>
+                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                    </a></li>
+                                    <li><a href="">
+                                        <i>12-18 <div class="separator"></div></i>
+                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                    </a></li>
+                                    <li><a href="">
+                                        <i>12-18 <div class="separator"></div></i>
+                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                    </a></li>
+                                    <li><a href="">
+                                        <i>12-18 <div class="separator"></div></i>
+                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                    </a></li>
+                                    <li><a href="">
+                                        <i>12-18 <div class="separator"></div></i>
+                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                    </a></li>
+                                    <li><a href="">
+                                        <i>12-18 <div class="separator"></div></i>
+                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                    </a></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-md-7">
                             <div class="title">
                                 <span class="title-header">
-                                    <img src="../resources/notify.png"></img>
-                                    <span>公告通知</span>
+                                    <img src="../resources/new.png"></img>
+                                    <span>校园动态</span>
                                 </span>
                                 <span><a href="">查看更多-></a></span>
+                            </div>
+                            <div class="notify-body">
+                                <div class="col-md-4 activity-pic">
+                                    <img src="../resources/login_container_bg_01b.jpg" alt="" class="image-shrink">
+                                </div>
+                                <div class="col-md-8">
+                                    <ul>
+                                        <li><a href="">
+                                            <i>12-18 <div class="separator"></div></i>
+                                            <span>东北林业大学2021年入职专职辅导员选聘综合东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                        </a></li>
+                                        <li><a href="">
+                                            <i>12-18 <div class="separator"></div></i>
+                                            <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                        </a></li>
+                                        <li><a href="">
+                                            <i>12-18 <div class="separator"></div></i>
+                                            <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
+                                        </a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
