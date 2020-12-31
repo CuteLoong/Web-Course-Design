@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Hello, world!</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    #page {
+        display: flex;
+    }
+    .image-shrink {
+        height: auto;
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+    }
+    .ellipsis {
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+
+    /*  aside-bar  */
+    #aside-bar {
+        height: 100vh;
+    }
+    #nav-head {
+        padding: 10px;
+        border-bottom: 1px solid #f2f2f2;
+        background-color: #c3c3c3;
+    }
+    nav ul {
+        list-style: none;
+    }
+    nav li a {
+        display: block;
+        text-decoration: none;
+        color: #000000;
+        padding: 10px 15px;
+    }
+    nav li a:hover {
+        background-color: #c3c3c3;
+        text-decoration: none;
+        color: #007bff;
+    }
+    nav i {
+        padding-right: 15px;
+        vertical-align: middle;
+    }
+    nav span {
+        vertical-align: middle;
+    }
+
+    /*  main  */
+    /*  main-head  */
+    #main-head{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #c3c3c3;
+    }
+    #main-head-title {
+        font-size: 2em;
+        font-weight: bold;
+        font-family: KaiTi;
+    }
+    table {
+        table-layout: fixed;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+<div id="page">
+    <div id="aside-bar" class="col-md-3 col-xl-2">
+        <nav class="nav flex-column">
+            <div id="nav-head">
+                <img src="../resources/images/nefu-icon.png" alt="" class="image-shrink">
+            </div>
+            <ul>
+                <li><a href="" id="dashboard"><i class="material-icons">dashboard</i><span>Dashboard</span></a></li>
+                <li><a href="" id="upload"><i class="material-icons">file_upload</i><span>Computer</span></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="main" class="col-md-9 col-xl-10">
+        <div id="main-head">
+            <div class="mr-auto" id="main-head-title">新闻管理</div>
+            <div class="col-auto">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+        <div id="main-body" class="container">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">标题</th>
+                    <th scope="col">时间</th>
+                    <th scope="col">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td class="ellipsis">Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+
+</script>
+</body>
+</html>
