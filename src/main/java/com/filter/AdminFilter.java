@@ -26,7 +26,7 @@ public class AdminFilter extends HttpFilter {
         if(user != null) {
             chain.doFilter(req,res);
         } else {
-            res.sendRedirect("/home/login");
+            res.sendRedirect("/2018210489/home/login");
         }
     }
 }

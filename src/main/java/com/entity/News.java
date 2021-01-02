@@ -7,8 +7,15 @@ public class News {
     private String title;
     private Date time;
     private String content;
-    private String images;
+    private String image;
+    private String author;
 
+
+
+    public News setAuthor(String author) {
+        this.author = author;
+        return this;
+    }
 
     public News(String Title, Date Time){
         this.title = Title;
@@ -21,8 +28,8 @@ public class News {
         return this;
     }
 
-    public News setImages(String images) {
-        this.images = images;
+    public News setImage(String image) {
+        this.image = image;
         return this;
     }
 
@@ -53,13 +60,16 @@ public class News {
         return content;
     }
 
-    public String getImages() {
-        return images;
+    public String getImage() {
+        return image;
     }
 
     public int getId() {
         return id;
     }
 
+    public String getAuthor() {
+        return author;
+    }
 
 }

@@ -52,7 +52,7 @@
     nav li a:hover {
         background-color: #c3c3c3;
         text-decoration: none;
-        color: #007bff;
+        color: white;
     }
     nav i {
         padding-right: 15px;
@@ -78,8 +78,17 @@
         table-layout: fixed;
         text-align: center;
     }
-
-
+    table td a {
+        padding: 5px 10px;
+        margin: 0 5px;
+        border-radius: 6px;
+        color: white;
+        text-decoration: none;
+    }
+    table td a:hover {
+        color: white;
+        text-decoration: none;
+    }
 </style>
 <body>
 <div id="page">
@@ -96,45 +105,33 @@
     </div>
     <div id="main" class="col-md-9 col-xl-10">
         <div id="main-head">
-            <div class="mr-auto" id="main-head-title">新闻管理</div>
-            <div class="col-auto">
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </div>
+            <div class="mr-auto" id="main-head-title">新闻发布</div>
+            <div class="col-auto"></div>
         </div>
         <div id="main-body" class="container">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">标题</th>
-                    <th scope="col">时间</th>
-                    <th scope="col">操作</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td class="ellipsis">Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-                </tbody>
-            </table>
+            <form action="">
+                <div class="form-group row">
+                    <label for="inputTitle" class="col-sm-2 col-form-label">新闻标题</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="inputTitle" placeholder="Title">
+                    </div>
+                    </div>
+                <div class="form-group row">
+                    <label for="inputAuthor" class="col-sm-2 col-form-label">作者</label>
+                    <div class="col-sm-3">
+                        <input type="text" class="form-control" id="inputAuthor" placeholder="Author">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputImage">图片上传</label>
+                    <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg, image/gif">
+                </div>
+                <div class="form-group">
+                    <label for="inputContent">正文</label>
+                    <textarea class="form-control" id="inputContent" rows="15"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">发布</button>
+            </form>
         </div>
     </div>
 </div>

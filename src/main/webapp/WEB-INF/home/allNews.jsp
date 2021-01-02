@@ -200,7 +200,7 @@
                 <div class="container nav-bar">
                     <div class="flex-row">
                         <div class="module left site-title-container">
-                            <a href="/home/index" class="logo-wrap">
+                            <a href="home/index" class="logo-wrap">
                                 <img src="resources/images/nefu-icon.png" alt="nefu-icon">
                             </a>
                         </div>
@@ -208,24 +208,24 @@
                             <div class="module left">
                                 <div class="collapse navbar-collapse">
                                     <ul id="menu" class="menu">
-                                        <li><a href="/home/introduce">专业介绍</a></li>
-                                        <li><a href="/home/allTeacher">教师队伍</a></li>
-                                        <li><a href="/home/employ">就业指南</a></li>
+                                        <li><a href="home/introduce">专业介绍</a></li>
+                                        <li><a href="home/allTeacher">教师队伍</a></li>
+                                        <li><a href="home/employ">就业指南</a></li>
                                         <li>
-                                            <a href="/home/laboratory">
+                                            <a href="home/laboratory">
                                                 实验室
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="/home/laboratory?lid=lab923" >923创新实验室</a></li>
-                                                <li><a href="/home/laboratory?lid=lab925" >925移动开发实验室</a></li>
+                                                <li><a href="home/laboratory?lid=lab923" >923创新实验室</a></li>
+                                                <li><a href="home/laboratory?lid=lab925" >925移动开发实验室</a></li>
                                                 <li><a href="#" >Action3</a></li>
                                                 <li><a href="#" >Action4</a></li>
                                                 <li role="separator" class="divider"></li>
                                                 <li><a href="#" >Action5</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="/home/login" target="_blank">后台管理</a></li>
+                                        <li><a href="home/login" target="_blank">后台管理</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -247,14 +247,13 @@
             </div>
             <div class="col-md-9">
                 <div class="new-list-title">
-                    当前位置：<a href="/home/index">首页</a>-><a href="/home/allNews">新闻首页</a>
+                    当前位置：<a href="home/index">首页</a>-><a href="home/allNews">新闻首页</a>
                 </div>
                 <div class="new-list">
                     <ul>
-                        <li><a href="">1 <span class="fr">123</span></a></li>
                         <c:forEach items="${news}" var="n">
                             <li>
-                                <a href="/home/detailNews?nid=${n.id}">
+                                <a href="home/detailNews?nid=${n.id}">
                                     <span class="new-list-context">${n.title}</span>
                                     <span class="fr">
                                         <fmt:formatDate pattern="yyyy-MM-dd" value="${n.time}" />

@@ -167,6 +167,16 @@
         text-indent: 2em;
     }
 
+    .news-content-image {
+        text-align: center;
+    }
+
+    .news-content-image img {
+        max-width: 70%;
+        border: 1px solid aquamarine;
+        border-radius: 10px;
+    }
+
     /*----    footer    ----*/
     footer {
         background-color: #00785a;
@@ -190,7 +200,7 @@
                 <div class="container nav-bar">
                     <div class="flex-row">
                         <div class="module left site-title-container">
-                            <a href="/home/index" class="logo-wrap">
+                            <a href="home/index" class="logo-wrap">
                                 <img src="resources/images/nefu-icon.png" alt="nefu-icon">
                             </a>
                         </div>
@@ -198,24 +208,24 @@
                             <div class="module left">
                                 <div class="collapse navbar-collapse">
                                     <ul id="menu" class="menu">
-                                        <li><a href="/home/introduce">专业介绍</a></li>
-                                        <li><a href="/home/allTeacher">教师队伍</a></li>
-                                        <li><a href="/home/employ">就业指南</a></li>
+                                        <li><a href="home/introduce">专业介绍</a></li>
+                                        <li><a href="home/allTeacher">教师队伍</a></li>
+                                        <li><a href="home/employ">就业指南</a></li>
                                         <li>
-                                            <a href="/home/laboratory">
+                                            <a href="home/laboratory">
                                                 实验室
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="/home/laboratory?lid=lab923" >923创新实验室</a></li>
-                                                <li><a href="/home/laboratory?lid=lab925" >925移动开发实验室</a></li>
+                                                <li><a href="home/laboratory?lid=lab923" >923创新实验室</a></li>
+                                                <li><a href="home/laboratory?lid=lab925" >925移动开发实验室</a></li>
                                                 <li><a href="#" >Action3</a></li>
                                                 <li><a href="#" >Action4</a></li>
                                                 <li role="separator" class="divider"></li>
                                                 <li><a href="#" >Action5</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="/home/login" target="_blank">后台管理</a></li>
+                                        <li><a href="home/login" target="_blank">后台管理</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -237,18 +247,22 @@
             </div>
             <div class="col-md-9">
                 <div class="new-list-title">
-                    当前位置：<a href="/home/index">首页</a>-><a href="/home/allNews">新闻首页</a>->正文
-                    <a href="/home/allNews" class="fr">返回</a>
+                    当前位置：<a href="home/index">首页</a>-><a href="home/allNews">新闻首页</a>->正文
+                    <a href="home/allNews" class="fr">返回</a>
                 </div>
                 <div class="news-content">
                     <div class="news-content-title">
                         <h2>${news.getTitle()}</h2>
                     </div>
                     <div class="news-content-time">
+                        <p>作者：${news.author}</p>
                         <fmt:formatDate pattern="yyyy-MM-dd" value="${news.getTime()}" />
                     </div>
                     <div class="news-content-context">
                         ${news.getContent()}
+                    </div>
+                    <div class="news-content-image">
+                        <img src="data:image/png;base64,${news.image}" alt="">
                     </div>
                 </div>
             </div>

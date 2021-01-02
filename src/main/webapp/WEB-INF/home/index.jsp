@@ -259,7 +259,7 @@
                 <div class="container nav-bar">
                     <div class="flex-row">
                         <div class="module left site-title-container">
-                            <a href="/home/index" class="logo-wrap">
+                            <a href="home/index" class="logo-wrap">
                                 <img src="resources/images/nefu-icon.png" alt="nefu-icon">
                             </a>
                         </div>
@@ -267,24 +267,24 @@
                             <div class="module left">
                                 <div class="collapse navbar-collapse">
                                     <ul id="menu" class="menu">
-                                        <li><a href="/home/introduce">专业介绍</a></li>
-                                        <li><a href="/home/allTeacher">教师队伍</a></li>
-                                        <li><a href="/home/employ">就业指南</a></li>
+                                        <li><a href="home/introduce">专业介绍</a></li>
+                                        <li><a href="home/allTeacher">教师队伍</a></li>
+                                        <li><a href="home/employ">就业指南</a></li>
                                         <li>
-                                            <a href="/home/laboratory">
+                                            <a href="home/laboratory">
                                                 实验室
                                                 <span class="caret"></span>
                                             </a>
                                             <ul class="dropdown-menu">
-                                                <li><a href="/home/laboratory?lid=lab923" >923创新实验室</a></li>
-                                                <li><a href="/home/laboratory?lid=lab925" >925移动开发实验室</a></li>
+                                                <li><a href="home/laboratory?lid=lab923" >923创新实验室</a></li>
+                                                <li><a href="home/laboratory?lid=lab925" >925移动开发实验室</a></li>
                                                 <li><a href="#" >Action3</a></li>
                                                 <li><a href="#" >Action4</a></li>
                                                 <li role="separator" class="divider"></li>
                                                 <li><a href="#" >Action5</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="/home/login" target="_blank">后台管理</a></li>
+                                        <li><a href="home/login" target="_blank">后台管理</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
                     <div class="col-md-4">
                         <h1><strong>软件工程</strong></h1>
                         <p>软件工程专业是一门研究用工程化方法构建和维护有效的、实用的和高质量的软件的学科。它涉及到程序设计语言，数据库，软件开发工具，系统平台，标准，设计模式等方面。在现代社会中，软件应用于多个方面。典型的软件比如有电子邮件，嵌入式系统，人机界面，办公套件，操作系统，编译器，数据库，游戏等。</p>
-                        <p><a class="btn btn-info btn-lg" href="/home/introduce" role="button">Learn more</a></p>
+                        <p><a class="btn btn-info btn-lg" href="home/introduce" role="button">Learn more</a></p>
                     </div>
                     <div class="col-md-8">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -357,13 +357,13 @@
                                     <img src="resources/images/notify.png"></img>
                                     <span>公告通知</span>
                                 </span>
-                            <span><a href="/home/allNews">查看更多-></a></span>
+                            <span><a href="home/allNews">查看更多-></a></span>
                         </div>
                         <div class="notify-body">
                             <ul>
                                 <c:forEach items="${news}" var="n" varStatus="s">
                                     <li>
-                                        <a href="/home/detailNews?nid=${n.id}">
+                                        <a href="home/detailNews?nid=${n.id}">
                                             <i><fmt:formatDate pattern="MM-dd" value="${n.time}" /> <div class="separator"></div></i>
                                             <span>${n.title}</span>
                                         </a>
@@ -409,7 +409,7 @@
             <div class="container">
                 <div class="teacher-title">
                     <h2>主要教师</h2>
-                    <a href="/home/allTeacher">查看更多-></a>
+                    <a href="home/allTeacher">查看更多-></a>
                 </div>
                 <div class="teacher-show row">
                     <div class="card col-md-4">

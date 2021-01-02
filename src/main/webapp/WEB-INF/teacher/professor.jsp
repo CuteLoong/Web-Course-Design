@@ -33,7 +33,7 @@
 
 <div class="show-part">
     <div class="teacher-item">
-        <a href="">
+        <a href="staticPage/teacherDetail.jsp">
             <img src="resources/teacher_all/sjm_all.jpg" alt="">
             <p>苏建民</p>
         </a>

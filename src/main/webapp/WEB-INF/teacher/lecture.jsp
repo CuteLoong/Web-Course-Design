@@ -33,13 +33,13 @@
 
 <div class="show-part">
     <div class="teacher-item">
-        <a href="">
+        <a href="staticPage/teacherDetail.jsp">
             <img src="resources/teacher_all/wb_all.jpg" alt="">
             <p>王波</p>
         </a>
     </div>
     <div class="teacher-item">
-        <a href="">
+        <a href="staticPage/teacherDetail.jsp">
             <img src="resources/teacher_all/ly_all.jpg" alt="">
             <p>李琰</p>
         </a>

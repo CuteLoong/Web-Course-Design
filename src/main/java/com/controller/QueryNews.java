@@ -1,8 +1,7 @@
 package com.controller;
 
-import com.entity.User;
-import com.service.UserService;
-import com.util.DataSourceUtils;
+import com.entity.News;
+import com.service.NewsService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,16 +10,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/home/login")
-public class Login extends HttpServlet {
+@WebServlet("/admin/queryNews")
+public class QueryNews extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        User user = (User) req.getSession().getAttribute("user");
-        if(user != null) {
-            resp.sendRedirect("/2018210489/admin/adminWelcome");
-        } else {
-            req.getRequestDispatcher("/WEB-INF/home/login.jsp").forward(req,resp);
-        }
+        News news = NewsService.queryNews(req.getParameter("title"));
+        req.setAttribute("news", news);
+        req.getRequestDispatcher("/WEB-INF/admin/ajax-pages/home-main-body.jsp").forward(req, resp);
     }
 
     @Override

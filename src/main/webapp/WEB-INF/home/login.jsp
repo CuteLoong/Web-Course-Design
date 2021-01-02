@@ -72,7 +72,7 @@
 <body>
 <div class="page">
     <div class="login-box">
-        <form action="/admin/adminWelcome" method="post">
+        <form action="/2018210489/admin/adminWelcome" method="post">
             <h1>后台管理系统</h1>
             <input id="name" type="text" class="input-txt" placeholder="Username" name="userName">
             <input id="passwd" type="password" class="input-txt" placeholder="Password" name="passWord">

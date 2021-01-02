@@ -18,7 +18,7 @@ public class adminWelcome extends HttpServlet {
         if(user != null) {
             req.getRequestDispatcher("/WEB-INF/admin/adminWelcome.jsp").forward(req, resp);
         } else {
-            resp.sendRedirect("/home/login");
+            resp.sendRedirect("/2018210489/home/login");
         }
 
     }
@@ -32,9 +32,9 @@ public class adminWelcome extends HttpServlet {
         if(user != null)
         {
             req.getSession().setAttribute("user", user);
-            url = "/admin/adminWelcome";
+            url = "/2018210489/admin/adminWelcome";
         } else {
-            url = "/home/login";
+            url = "/2018210489/home/login";
         }
         resp.sendRedirect(url);
     }

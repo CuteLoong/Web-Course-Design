@@ -26,19 +26,19 @@
 
 <div class="show-part">
     <div class="teacher-item">
-        <a href="">
+        <a href="staticPage/teacherDetail.jsp">
             <img src="resources/teacher_all/Lily_all.jpg" alt="">
             <p>李莉</p>
         </a>
     </div>
     <div class="teacher-item">
-        <a href="">
+        <a href="staticPage/teacherDetail.jsp">
             <img src="resources/teacher_all/lsq_all.png" alt="">
             <p>罗嗣卿</p>
         </a>
     </div>
     <div class="teacher-item">
-        <a href="">
+        <a href="staticPage/teacherDetail.jsp">
             <img src="resources/teacher_all/ld_all.jpg" alt="">
             <p>刘丹</p>
         </a>
