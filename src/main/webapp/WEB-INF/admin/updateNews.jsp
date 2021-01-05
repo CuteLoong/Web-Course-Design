@@ -71,7 +71,8 @@
             </div>
             <div class="form-group">
                 <label for="inputContent">正文</label>
-                <textarea class="form-control" id="inputContent" rows="15" name="content">${news.content}</textarea>
+                <textarea class="form-control" id="inputContent" rows="15" name="content-text">${news.content}</textarea>
+                <input type="hidden" name="content" />
             </div>
             <button type="submit" class="btn btn-primary">发布</button>
         </form>
@@ -85,6 +86,12 @@
     $("#inputImage").change(function () {
         let file = $(this).prop("files")[0];
         $(this).next().val(file);
+    })
+    $("textarea").blur(function () {
+        let text = $("textarea").text();
+        // console.log(text);
+        let des = text.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, '&nbsp;');
+        $("input[name=content]").val(des);
     })
 </script>
 </body>

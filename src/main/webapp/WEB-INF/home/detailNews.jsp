@@ -72,7 +72,6 @@
 
     .news-content-context {
         margin-top: 10px;
-        text-indent: 2em;
     }
 
     .news-content-image {
