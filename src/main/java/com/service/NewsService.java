@@ -96,22 +96,23 @@ public class NewsService {
         }
     }
 
-    public static News queryNews(String title) {
-        News news = null;
-        String sql = "select * from News where title=?";
+    public static List<News> queryNews(String title) {
+        List<News> news = new ArrayList<>();
+        String sql = "select * from News where title like ?";
         try(Connection conn = DataSourceUtils.getConnection();
             PreparedStatement st = conn.prepareStatement(sql)) {
-            st.setString(1,title);
+            st.setString(1,"%"+title+"%");
             try(ResultSet rs = st.executeQuery()) {
                 while(rs.next())
                 {
-                    news = new News();
-                    news.setId(rs.getInt("id"));
-                    news.setTitle(rs.getString("title"));
-                    news.setTime(new Date(rs.getTimestamp("publicTime").getTime()));
-                    news.setContent(rs.getString("content"));
-                    news.setImage(rs.getString("image"));
-                    news.setAuthor(rs.getString("author"));
+                    News n = new News();
+                    n.setId(rs.getInt("id"));
+                    n.setTitle(rs.getString("title"));
+                    n.setTime(new Date(rs.getTimestamp("publicTime").getTime()));
+                    n.setContent(rs.getString("content"));
+                    n.setImage(rs.getString("image"));
+                    n.setAuthor(rs.getString("author"));
+                    news.add(n);
                 }
             }
         } catch (SQLException throwables) {

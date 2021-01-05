@@ -17,7 +17,7 @@ import java.util.logging.Logger;
 @WebServlet("/admin/updateNews")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 5)
 public class UpdateNews extends HttpServlet {
-    private static final Logger LOGGER = Logger.getLogger(IndexServlet.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(UpdateNews.class.getName());
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         int id = Integer.parseInt(req.getParameter("nid"));
@@ -35,10 +35,12 @@ public class UpdateNews extends HttpServlet {
         String title = req.getParameter("title");
         String author = req.getParameter("author");
         String content = req.getParameter("content");
-
-        Part part = req.getPart("image");
-        part.getInputStream().readAllBytes();
-        String image = Base64.getEncoder().encodeToString((part.getInputStream().readAllBytes()));
+        String image = NewsService.getNews(id).getImage();
+        if(!req.getParameter("image-file").equals("")){
+            Part part = req.getPart("image");
+            part.getInputStream().readAllBytes();
+            image = Base64.getEncoder().encodeToString((part.getInputStream().readAllBytes()));
+        }
 
         news = new News();
         news.setTitle(title);
@@ -47,6 +49,6 @@ public class UpdateNews extends HttpServlet {
         news.setImage(image);
         news.setId(id);
         NewsService.updateNews(news);
-        resp.sendRedirect("/2018210489/admin/adminWelcome");
+        resp.sendRedirect(req.getContextPath() + "/admin/adminWelcome");
     }
 }

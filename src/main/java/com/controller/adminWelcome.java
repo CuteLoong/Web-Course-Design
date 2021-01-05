@@ -32,10 +32,10 @@ public class adminWelcome extends HttpServlet {
         if(user != null)
         {
             req.getSession().setAttribute("user", user);
-            url = "/2018210489/admin/adminWelcome";
+            url = "/admin/adminWelcome";
         } else {
-            url = "/2018210489/home/login";
+            url = "/home/login";
         }
-        resp.sendRedirect(url);
+        resp.sendRedirect(req.getContextPath() + url);
     }
 }

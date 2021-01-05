@@ -17,33 +17,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <link href="resources/css/myConnCss.css" rel="stylesheet">
 </head>
 <style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
-
-    .green {
-        background-color: #00785a;
-    }
-    .separator {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        width: 1px;
-        height: 12px;
-        background: #99c9bd;
-        margin-top: -6px;
-    }
-    .image-shrink {
-        height: auto;
-        width: auto;
-        max-height: 100%;
-        max-width: 100%;
-    }
 
     /*----    header    ----*/
     .nav-container {
@@ -235,65 +211,10 @@
         color: #6e6e6e;
     }
 
-    /*----    footer    ----*/
-    footer {
-        background-color: #00785a;
-        padding: 25px 0;
-        color: white;
-        font-size: 12px;
-    }
-    .footer-info {
-        list-style: none;
-    }
-    .footer-info li {
-        text-align: center;
-        padding: 2px;
-    }
-
 </style>
 <body>
 <div id="page" class="site">
-    <header class="site-header">
-        <div class="nav-container">
-            <nav id="site-navigation" class="main-navigation green" role="navigation">
-                <div class="container nav-bar">
-                    <div class="flex-row">
-                        <div class="module left site-title-container">
-                            <a href="home/index" class="logo-wrap">
-                                <img src="resources/images/nefu-icon.png" alt="nefu-icon">
-                            </a>
-                        </div>
-                        <div class="module-group right">
-                            <div class="module left">
-                                <div class="collapse navbar-collapse">
-                                    <ul id="menu" class="menu">
-                                        <li><a href="home/introduce">专业介绍</a></li>
-                                        <li><a href="home/allTeacher">教师队伍</a></li>
-                                        <li><a href="home/employ">就业指南</a></li>
-                                        <li>
-                                            <a href="home/laboratory">
-                                                实验室
-                                                <span class="caret"></span>
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="home/laboratory?lid=lab923" >923创新实验室</a></li>
-                                                <li><a href="home/laboratory?lid=lab925" >925移动开发实验室</a></li>
-                                                <li><a href="#" >Action3</a></li>
-                                                <li><a href="#" >Action4</a></li>
-                                                <li role="separator" class="divider"></li>
-                                                <li><a href="#" >Action5</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="home/login" target="_blank">后台管理</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <%@include file="/WEB-INF/component/header.jsp"%>
     <section class="content">
         <div class="jumbotron">
             <div class="container">
@@ -378,7 +299,7 @@
                                     <img src="resources/images/new.png"></img>
                                     <span>校园动态</span>
                                 </span>
-                            <span><a href="">查看更多-></a></span>
+                            <span><a href="home/allNews">查看更多-></a></span>
                         </div>
                         <div class="notify-body">
                             <div class="col-md-4 activity-pic">
@@ -386,18 +307,14 @@
                             </div>
                             <div class="col-md-8">
                                 <ul>
-                                    <li><a href="">
-                                        <i>12-18 <div class="separator"></div></i>
-                                        <span>东北林业大学2021年入职专职辅导员选聘综合东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
-                                    </a></li>
-                                    <li><a href="">
-                                        <i>12-18 <div class="separator"></div></i>
-                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
-                                    </a></li>
-                                    <li><a href="">
-                                        <i>12-18 <div class="separator"></div></i>
-                                        <span>东北林业大学2021年入职专职辅导员选聘综合考核通过人员公示</span>
-                                    </a></li>
+                                    <c:forEach items="${news}" var="n" varStatus="s">
+                                        <li>
+                                            <a href="home/detailNews?nid=${n.id}">
+                                                <i><fmt:formatDate pattern="MM-dd" value="${n.time}" /> <div class="separator"></div></i>
+                                                <span>${n.title}</span>
+                                            </a>
+                                        </li>
+                                    </c:forEach>
                                 </ul>
                             </div>
                         </div>
@@ -458,44 +375,12 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="left col-md-7">
-                    <ul>
-                        <img src="resources/images/lolo.png" alt="">
-                    </ul>
-                </div>
-                <div class="right col-md-5">
-                    <ul class="footer-info">
-                        <li><span>东北林业大学版权所有</span></li>
-                        <li><span>中国</span></li>
-                        <li><span>黑龙江哈尔滨市香坊区和兴路26号</span></li>
-                        <li><span>邮编  150040</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <%@include file="/WEB-INF/component/footer.jsp"%>
 </div>
 <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script>
-    $(function () {
-        $("#menu li").hover(function () {
-            let child = $(this).find(".dropdown-menu");
-            if(child)
-            {
-                child.slideDown();
-            }
-        },function () {
-            let child = $(this).find(".dropdown-menu");
-            if(child)
-            {
-                child.slideUp();
-            }
-        })
-    })
+
 </script>
 </body>
 </html>

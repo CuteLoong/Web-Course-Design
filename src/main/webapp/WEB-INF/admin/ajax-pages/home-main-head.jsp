@@ -13,6 +13,7 @@
     <form class="form-inline my-2 my-lg-0" id="search">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-text">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-search>Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="reset" data-reset style="margin-left: 10px">Reset</button>
     </form>
 </div>
 
@@ -36,6 +37,7 @@
 
         $("[data-search]").click(function () {
             let title = $("#search-text").val()
+            console.log(title);
             if(title.length > 0) {
                 $.ajax({
                     url: "admin/queryNews",
@@ -47,13 +49,16 @@
                     },
                     success: resp=> {
                         $("#main-body").html(resp);
-                        console.log(title);
+
                     }
                 })
             } else {
                 uploadTable();
             }
-
+            $("[data-reset]").click(function () {
+                $("#search-text").val("");
+                uploadTable();
+            })
 
         })
     })

@@ -1,25 +1,17 @@
 package com.controller;
 
-import com.entity.News;
-import com.service.NewsService;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.List;
-import java.util.logging.Logger;
 
-@WebServlet("/admin/queryNews")
-public class QueryNews extends HttpServlet {
-    private static Logger LOGGER = Logger.getLogger(QueryNews.class.getName());
+@WebServlet("/employ/employMore")
+public class employMore extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<News> news = NewsService.queryNews(req.getParameter("title"));
-        req.setAttribute("news", news);
-        req.getRequestDispatcher("/WEB-INF/admin/ajax-pages/home-main-body.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/employ/employMore.jsp").forward(req, resp);
     }
 
     @Override

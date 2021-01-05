@@ -66,7 +66,8 @@
             </div>
             <div class="form-group">
                 <label for="inputImage">图片修改</label>
-                <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg, image/gif" value="${news.image}" name="image">
+                <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg, image/gif" name="image">
+                <input type="hidden" name="image-file" value="">
             </div>
             <div class="form-group">
                 <label for="inputContent">正文</label>
@@ -81,7 +82,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="resources/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script>
-
+    $("#inputImage").change(function () {
+        let file = $(this).prop("files")[0];
+        $(this).next().val(file);
+    })
 </script>
 </body>
 </html>
