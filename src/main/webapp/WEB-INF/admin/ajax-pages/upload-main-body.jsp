@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
         <label for="inputImage">图片上传</label>
-        <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg, image/gif" name="image">
+        <input type="file" class="form-control-file" id="inputImage" accept=".png, .jpg, .gif" name="image">
     </div>
     <div class="form-group">
         <label for="inputContent">正文</label>
@@ -43,7 +43,7 @@
     //     })
     // })
     $("textarea").blur(function () {
-        let text = $("textarea").text();
+        let text = $("textarea").val();
         // console.log(text);
         let des = text.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, '&nbsp;');
         $("input[name=content]").val(des);

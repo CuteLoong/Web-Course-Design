@@ -34,7 +34,7 @@
             </div>
             <div class="right col-md-5">
                 <ul class="footer-info">
-                    <li><span>东北林业大学版权所有</span></li>
+                    <li><span>软件四班吴小龙 版权所有&copy;</span></li>
                     <li><span>中国</span></li>
                     <li><span>黑龙江哈尔滨市香坊区和兴路26号</span></li>
                     <li><span>邮编  150040</span></li>

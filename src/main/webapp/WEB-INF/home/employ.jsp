@@ -104,7 +104,7 @@
             },
             success: resp=> {
                 $("#lab-show").html(resp);
-                $("#"+"${lid}").addClass("active");
+                $("#employIndex").addClass("active");
             }
         })
 

@@ -28,7 +28,7 @@
             </td>
             <td>
                 <a href="home/detailNews?nid=${n.id}" class="bg-success" target="_blank">查看</a>
-                <a href="admin/updateNews?nid=${n.id}" class="bg-warning" target="_blank">修改</a>
+                <a href="admin/updateNews?nid=${n.id}" class="bg-warning">修改</a>
                 <a href="javascript:void(0);" class="bg-danger" id="${n.id}" data-delete>删除</a>
             </td>
         </tr>

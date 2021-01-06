@@ -29,13 +29,21 @@
         font-weight: bold;
         font-family: KaiTi;
     }
+    #main-head a {
+        text-decoration: none;
+        color: #c3c3c3;
+    }
+    #main-head a:hover {
+        text-decoration: none;
+        color: #5e5e5e;
+    }
 </style>
 <body>
 
 <div id="page" class="container">
     <div id="main-head">
         <div class="mr-auto" id="main-head-title">新闻修改</div>
-        <div class="col-auto">返回</div>
+        <div class="col-auto"><a href="admin/adminWelcome">返回</a></div>
     </div>
     <div id="main-body">
         <form action="admin/updateNews" method="post" enctype="multipart/form-data">
@@ -66,7 +74,7 @@
             </div>
             <div class="form-group">
                 <label for="inputImage">图片修改</label>
-                <input type="file" class="form-control-file" id="inputImage" accept="image/png,image/jpg, image/gif" name="image">
+                <input type="file" class="form-control-file" id="inputImage" accept=".png, .jpg, .gif" name="image">
                 <input type="hidden" name="image-file" value="">
             </div>
             <div class="form-group">
@@ -83,12 +91,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="resources/js/bootstrap.min.js" crossorigin="anonymous"></script>
 <script>
+    let content = $("textarea").val();
+    $("input[name=content]").val(content);
+    $("textarea").val(content.replace(new RegExp("<br/>","g"), "\n"));
+
     $("#inputImage").change(function () {
         let file = $(this).prop("files")[0];
         $(this).next().val(file);
     })
     $("textarea").blur(function () {
-        let text = $("textarea").text();
+        let text = $("textarea").val();
         // console.log(text);
         let des = text.replace(/\r\n/g, '<br/>').replace(/\n/g, '<br/>').replace(/\s/g, '&nbsp;');
         $("input[name=content]").val(des);
